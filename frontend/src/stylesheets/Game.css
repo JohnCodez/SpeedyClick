@@ -1,0 +1,16 @@
+.game{
+    position: relative;
+    
+}
+
+.game .grid{
+    justify-content: space-evenly;
+    
+}
+
+.game .grid .col {
+    background-color: red;
+    outline: black solid 0.2rem;
+    height: 10rem;
+
+}
