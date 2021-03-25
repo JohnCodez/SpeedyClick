@@ -8,7 +8,7 @@ import "../stylesheets/Game.css"
 export default class Game extends Component {
 
     state = {
-        boxes: ['black', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white'],
+        boxes: ['white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white'],
         redirect: false
     }
 
@@ -32,10 +32,12 @@ export default class Game extends Component {
                     }
                 }
             }))
+            this.props.addPoints()
         } else {
             this.setState({
                 redirect: true
             })
+            this.props.changeGameStatus()
         }
     }
 
