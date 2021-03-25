@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'react-grid-system'
+import update from 'react-addons-update'
 import "../stylesheets/Game.css"
 
 export default class Game extends Component {
@@ -8,9 +9,25 @@ export default class Game extends Component {
         boxes: ['white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white']
     }
 
+    randomNum = (exlude) => {
+        let number = exlude
+        while (number === exlude) {
+            number = Math.floor(Math.random() * (16 - 0)) + 0;
+        }
+        return number
+    }
 
     handleClick = (boxNumber) => {
-        
+        this.setState(update(this.state, {
+            boxes: {
+                [boxNumber]: {
+                    $set: 'white'
+                },
+                [this.randomNum(boxNumber)]: {
+                    $set: 'black'
+                }
+            }
+        }))
     }
 
     render() {
