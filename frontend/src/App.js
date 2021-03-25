@@ -12,11 +12,11 @@ class App extends Component {
       <div className="App">
       <div className="window">
         <BrowserRouter>
-        <Switch>
-        <Route path='/game' render={() => <Game />} />
-        <Route path='/end' render={() => <End />} />
-        <Route path='/' render={() => <Start />} />
-        </Switch>
+          <Switch>
+            <Route path='/game' render={() => <Game />} />
+            <Route path='/end' render={() => <End />} />
+            <Route path='/' render={() => <Start />} />
+          </Switch>
         </BrowserRouter>
       </div>
       </div>

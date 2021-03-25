@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'react-grid-system'
 import update from 'react-addons-update'
+import  { Redirect } from 'react-router-dom';
 import "../stylesheets/Game.css"
+
 
 export default class Game extends Component {
 
     state = {
-        boxes: ['white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white']
+        boxes: ['black', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white'],
+        redirect: false
     }
 
     randomNum = (exlude) => {
@@ -18,21 +21,28 @@ export default class Game extends Component {
     }
 
     handleClick = (boxNumber) => {
-        this.setState(update(this.state, {
-            boxes: {
-                [boxNumber]: {
-                    $set: 'white'
-                },
-                [this.randomNum(boxNumber)]: {
-                    $set: 'black'
+        if (this.state.boxes[boxNumber] === "black"){
+            this.setState(update(this.state, {
+                boxes: {
+                    [boxNumber]: {
+                        $set: 'white'
+                    },
+                    [this.randomNum(boxNumber)]: {
+                        $set: 'black'
+                    }
                 }
-            }
-        }))
+            }))
+        } else {
+            this.setState({
+                redirect: true
+            })
+        }
     }
 
     render() {
         return (
             <div className="game">
+                {this.state.redirect ? <Redirect to='/end/' /> : console.log() }
                 <Container className="grid">
                 <Row>
                     <Col className='col' style={{width: '25%', flex: 'initial', backgroundColor: this.state.boxes[0] }} onClick={() => {this.handleClick(0)}}></Col>
