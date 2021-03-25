@@ -8,7 +8,7 @@ import "../stylesheets/Game.css"
 export default class Game extends Component {
 
     state = {
-        boxes: ['white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white'],
+        boxes: ['black', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white'],
         redirect: false
     }
 

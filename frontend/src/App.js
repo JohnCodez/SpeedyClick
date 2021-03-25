@@ -30,6 +30,12 @@ class App extends Component {
     }
   }
 
+  handleResetScore = () => {
+    this.setState({
+      score: 0
+    })
+  }
+
   render(){
     return (
       <div className="App">
@@ -38,7 +44,7 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path='/game' render={() => <Game score={this.state.score} addPoints={this.handleAddPoints} changeGameStatus={this.handleGameStatus} />} />
-            <Route exact path='/end' render={() => <End score={this.state.score}  />} />
+            <Route exact path='/end' render={() => <End score={this.state.score} resetScore={this.handleResetScore} />} />
             <Route exact path='/' render={() => <Start changeGameStatus={this.handleGameStatus} />} />
           </Switch>
         </Router>
