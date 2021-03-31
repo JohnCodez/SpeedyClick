@@ -9,7 +9,6 @@ export default class Game extends Component {
 
     state = {
         boxes: ['black', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white'],
-        redirect: false
     }
 
     randomNum = (exlude) => {
@@ -34,9 +33,7 @@ export default class Game extends Component {
             }))
             this.props.addPoints()
         } else {
-            this.setState({
-                redirect: true
-            })
+            this.props.end()
             this.props.changeGameStatus()
         }
     }
@@ -44,7 +41,6 @@ export default class Game extends Component {
     render() {
         return (
             <div className="game">
-                {this.state.redirect ? <Redirect to='/end/' /> : console.log() }
                 <Container className="grid">
                 <Row>
                     <Col className='col' style={{width: '25%', flex: 'initial', backgroundColor: this.state.boxes[0] }} onClick={() => {this.handleClick(0)}}></Col>
