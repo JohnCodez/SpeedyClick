@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Timer } from 'react-compound-timer'
 import Start from './Components/Start.js'
 import Game from './Components/Game.js'
 import End from './Components/End.js'
@@ -16,6 +17,7 @@ class App extends Component {
     this.setState({
       score: this.state.score + 100
     })
+    // console.log(Date.prototype.getSeconds)
   }
 
   handleGameStatus = () => {
@@ -39,7 +41,7 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        {this.state.inGame ? <div style={{height: '30%'}}><h1 style={{margin: '0'}}>Speedy Click</h1><br></br><h2 style={{margin: '0'}}>Score: {this.state.score}</h2></div> : <div style={{height: '30%'}}><h1 style={{marginBottom: '1%', marginTop: '0'}}>Speedy Click</h1></div>}
+        {this.state.inGame ? <div style={{height: '30%'}}><h1 style={{margin: '0'}}>Speedy Click</h1><br></br>Time: <Timer/> <h2 style={{margin: '0'}}>Score: {this.state.score}</h2></div>  : <div style={{height: '30%'}}><h1 style={{marginBottom: '1%', marginTop: '0'}}>Speedy Click</h1></div>}
       <div className="window">  
         <Router>
           <Switch>
