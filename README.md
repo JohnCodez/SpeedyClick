@@ -11,5 +11,7 @@ If you would like to work with me on this to improve it, please reach out
 
 This is only a test project that will later be re written in Javascript
 
+This was done entirely by me as of now
+
 This is NOT open source
 
