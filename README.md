@@ -7,5 +7,9 @@ This is made fully with React and currently no Backend
 
 Feel free to make videos or stream anything about this without having to reach out. 
 
+If you would like to work with me on this to improve it, please reach out
+
+This is only a test project that will later be re written in Javascript
+
 This is NOT open source
 
