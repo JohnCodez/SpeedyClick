@@ -15,3 +15,7 @@ This was done entirely by me as of now
 
 This is NOT open source
 
+--------------------------------------------------------------------------------------------
+
+There is now a Vanilla JS one in developement that will be a much better version that functions properly and has more features and game modes
+
