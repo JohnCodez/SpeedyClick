@@ -15,8 +15,6 @@ class App extends Component {
     seconds: 10
   }
 
-  
-
   handleAddPoints = () => {
     this.setState({
       score: this.state.score + 100
