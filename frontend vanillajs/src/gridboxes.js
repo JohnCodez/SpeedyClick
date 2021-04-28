@@ -8,10 +8,12 @@ function getRandomBoxNumber() {
 
 function clicked(event) {
     event.preventDefault()
+    console.log(event.target.id)
+    console.log(fullBoxes)
 
-    if (fullBoxes.includes(event.target.id)) { 
-        fullBoxes.filter(box => box != (event.target.id))
+    if (fullBoxes.includes(parseInt(event.target.id))) { 
         console.log(fullBoxes)
+        fullBoxes.filter(box => box != (event.target.id))
         changeColor(event.target, colorTheme[2])
         score.value = score.value + 100
     } else {
