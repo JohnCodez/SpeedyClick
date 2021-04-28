@@ -3,6 +3,7 @@
 function start() {
     // Setup
     startButton.remove()
+    inGame = true
     for (let i = 0; i < 16; i++) {
         let tag = document.createElement("div")
         tag.className = 'gridbox'
@@ -13,6 +14,7 @@ function start() {
         grid.append(tag)
         gridbox[i].addEventListener('mousedown', clicked )
     }
+    score.value = 0
     
     // Time Control
     function stopTime() {
@@ -39,6 +41,7 @@ startButton.addEventListener( 'mouseenter', () => {
 
 function gameEnd() {
     time.remove()
+    inGame = false
     for (let i = 0; i < 16; i++) {
         document.getElementById(i.toString()).remove()
     }
