@@ -5,6 +5,8 @@ body { position: absolute;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    /* -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: black; */
 }
 
 #title{
@@ -27,11 +29,10 @@ body { position: absolute;
 
 #grid {
     position: relative;
-    outline: rgb(87, 87, 87) solid 0.34rem;
+    outline: solid 0.34rem;
     width: 40rem;
     height: 40rem;
     top: 10rem;
-    /* background-color: black; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -60,4 +61,52 @@ body { position: absolute;
     font-size: 8rem;
     height: 9rem;
     width: 24rem;
+}
+
+#time {
+    position: relative;
+    user-select: none;
+    -moz-user-select: none;
+    /* left: 2rem; */
+    border: 0;
+    font-size: 2rem;
+    left: 10rem;
+}
+
+#score {
+    border: 0;
+}
+
+#endText {
+    font-size: 3rem;
+}
+
+#home {
+    position: relative;
+    top: 30rem;
+    right: 8rem;
+}
+
+#black-theme {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    background-color: black;
+    right: 48rem;  
+}
+
+#blue-theme {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    background-color: blue;
+    right: 48rem;
+}
+
+#red-theme {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    background-color: red;
+    right: 48rem;
 }
