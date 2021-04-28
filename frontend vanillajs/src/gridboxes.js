@@ -3,7 +3,12 @@ function changeColor(element, color) {
 }
 
 function getRandomBoxNumber() {
-    return Math.floor(Math.random() * 16)
+    let number = Math.floor(Math.random() * 16)
+    while (fullBoxes.includes(number)){
+        number = getRandomBoxNumber()
+    }
+    
+    return number
 }
 
 function clicked(event) {
@@ -14,9 +19,6 @@ function clicked(event) {
     if (fullBoxes.includes(parseInt(event.target.id))) {
         
         let newFullBox = getRandomBoxNumber()
-        while (fullBoxes.includes(newFullBox)){
-            newFullBox = getRandomBoxNumber()
-        }
 
         fullBoxes = fullBoxes.filter(box => box != (event.target.id))
         changeColor(event.target, colorTheme[2])
