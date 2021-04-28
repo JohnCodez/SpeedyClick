@@ -1,20 +1,29 @@
 // Start //
 
-// <input type='number' step='0.1' id='time' dragable="false"></input>
-
 function start() {
     // Setup
+    // console.log("start")
     startButton = document.getElementById('start')
     startButton.remove()
-    console.log("start")
     inGame = true
+    
     let timeNew = document.createElement("input")
     timeNew.id = "time"
     timeNew.type = 'number'
+    timeNew.disabled = true
     timeNew.step = '0.1'
     timeNew.draggable = false
     body.append(timeNew)
     let time = document.getElementById('time')
+    
+    let scoreNew = document.createElement("input")
+    scoreNew.id = "score"
+    scoreNew.type = 'number'
+    scoreNew.disabled = true
+    scoreNew.draggable = false
+    body.append(scoreNew)
+    let score = document.getElementById('score')
+
     for (let i = 0; i < startingBoxes; i++) {
         fullBoxes.push(getRandomBoxNumber())
     }
@@ -65,8 +74,10 @@ startButton.addEventListener( 'mouseenter', () => {
 // End //
 
 function gameEnd() {
-    console.log("end")
+    // console.log("end")
+    let score = document.getElementById('score')
     time.remove()
+    score.remove()
     inGame = false
     fullBoxes = []
     startTime = gameTime
@@ -90,8 +101,7 @@ function gameEnd() {
 // Return //
 
 function goBackHome() {
-    console.log("return")
-    score.remove()
+    // console.log("return")
     endText.remove()
     home.remove()
     let startNew = document.createElement("p")

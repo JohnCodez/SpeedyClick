@@ -12,9 +12,11 @@ function clicked(event) {
     console.log(fullBoxes)
 
     if (fullBoxes.includes(parseInt(event.target.id))) {
-        fullBoxes.filter(box => box != (event.target.id))
+        fullBoxes = fullBoxes.filter(box => box != (event.target.id))
         changeColor(event.target, colorTheme[2])
         score.value = parseInt(score.value) + 100
+
+        
     } else {
         gameEnd()
     }

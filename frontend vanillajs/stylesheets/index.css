@@ -68,13 +68,15 @@ body { position: absolute;
     user-select: none;
     -moz-user-select: none;
     /* left: 2rem; */
-    border: 0;
     font-size: 2rem;
     left: 10rem;
+    background: transparent;
+    border: none;
 }
 
 #score {
-    border: 0;
+    background: transparent;
+    border: none;
 }
 
 #endText {

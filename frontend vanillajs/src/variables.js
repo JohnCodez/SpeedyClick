@@ -8,7 +8,6 @@ const gridbox = document.getElementsByClassName('gridbox')
 const grid = document.getElementById('grid')
 
 let startButton = document.getElementById('start')
-const score = document.getElementById('score')
 
 let gameTime = 20
 let startTime = gameTime
