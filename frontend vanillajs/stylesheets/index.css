@@ -79,6 +79,9 @@ body { position: absolute;
 
 #endText {
     font-size: 3rem;
+    height: 4rem;
+    width: 15rem;
+    
 }
 
 #home {

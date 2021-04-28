@@ -1,9 +1,20 @@
 // Start //
 
+// <input type='number' step='0.1' id='time' dragable="false"></input>
+
 function start() {
     // Setup
+    startButton = document.getElementById('start')
     startButton.remove()
+    console.log("start")
     inGame = true
+    let timeNew = document.createElement("input")
+    timeNew.id = "time"
+    timeNew.type = 'number'
+    timeNew.step = '0.1'
+    timeNew.draggable = false
+    body.append(timeNew)
+    let time = document.getElementById('time')
     for (let i = 0; i < startingBoxes; i++) {
         fullBoxes.push(getRandomBoxNumber())
     }
@@ -25,22 +36,28 @@ function start() {
     score.value = 0
     
     // Time Control
-    function stopTime() {
-        clearInterval(decreaseTime)
-    }
     time.value = startTime
     const decreaseTime = setInterval(() => {
-        if (time.value != 0) {
+        if (inGame == false) {
+            stopTime()
+        } else if (time.value != 0) {
             time.value = Math.round(((time.value - 0.01) + Number.EPSILON) * 100) / 100
         } else {
             stopTime()
             gameEnd()
         }
     }, 10)
+
+    
+
+    function stopTime() {
+        clearInterval(decreaseTime)
+    }
     
 }
 
-startButton.addEventListener( 'click', () => start() )
+
+startButton.addEventListener( 'click', start )
 startButton.addEventListener( 'mouseenter', () => {
     startButton.style.cursor = "pointer"
 })
@@ -48,8 +65,11 @@ startButton.addEventListener( 'mouseenter', () => {
 // End //
 
 function gameEnd() {
+    console.log("end")
     time.remove()
     inGame = false
+    fullBoxes = []
+    startTime = gameTime
     for (let i = 0; i < 16; i++) {
         document.getElementById(i.toString()).remove()
     }
@@ -58,10 +78,11 @@ function gameEnd() {
     const home = document.createElement("h1")
     endText.innerText = "Score: " + score.value
     endText.id = "endText"
+    endText.draggable = false
     home.innerText = "Home"
     home.id = "home"
     home.addEventListener('mouseenter', () => {home.style.cursor = "pointer"})
-    home.addEventListener('click', goBackHome())
+    home.addEventListener('click', goBackHome)
     grid.append(endText)
     grid.append(home)
 }
@@ -69,6 +90,16 @@ function gameEnd() {
 // Return //
 
 function goBackHome() {
+    console.log("return")
     score.remove()
-    // home.remove()
+    endText.remove()
+    home.remove()
+    let startNew = document.createElement("p")
+    startNew.id = "start"
+    startNew.innerText = "START"
+    startNew.addEventListener( 'click', start )
+    startNew.addEventListener( 'mouseenter', () => {
+        startNew.style.cursor = "pointer"
+    })
+    grid.append(startNew)
 }

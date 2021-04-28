@@ -7,12 +7,11 @@ const redTheme = document.getElementById('red-theme')
 const gridbox = document.getElementsByClassName('gridbox')
 const grid = document.getElementById('grid')
 
-const startButton = document.getElementById('start')
-const time = document.getElementById('time')
+let startButton = document.getElementById('start')
 const score = document.getElementById('score')
-const home = document.getElementById('home')
 
-let startTime = 20
+let gameTime = 20
+let startTime = gameTime
 let colorTheme = ['black', 'gray', 'darkgray']
 let inGame = false
 
