@@ -25,7 +25,7 @@ blueTheme.addEventListener('click', () => {
     }
 })
 redTheme.addEventListener('click', () => {
-    colorTheme = ['#800000', '#FF9999', '#E60000']
+    colorTheme = ['#CC0000', '#B30000', '#FF6666']
     body.style.color = colorTheme[0]
     grid.style.outlineColor = colorTheme[1]
     if (inGame == false) {
