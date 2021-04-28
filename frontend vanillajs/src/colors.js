@@ -16,8 +16,12 @@ function updateColorTheme() {
     } else {
         for (let i = 0; i < 16; i++) {
             let box = document.getElementById(i.toString())
-            box.style.backgroundColor = colorTheme[0]
             box.style.outlineColor = colorTheme[1]
+            if (fullBoxes.includes(i)){
+                box.style.backgroundColor = colorTheme[0]
+            } else {
+                box.style.backgroundColor = colorTheme[2]
+            }
         }
     }
 }

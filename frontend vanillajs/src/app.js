@@ -4,13 +4,21 @@ function start() {
     // Setup
     startButton.remove()
     inGame = true
+    for (let i = 0; i < startingBoxes; i++) {
+        fullBoxes.push(getRandomBoxNumber())
+    }
     for (let i = 0; i < 16; i++) {
         let tag = document.createElement("div")
+        tag.id = i
         tag.className = 'gridbox'
         tag.draggable = 'false'
-        tag.style.backgroundColor = colorTheme[0]
         tag.style.outlineColor = colorTheme[1]
-        tag.id = i
+        if (fullBoxes.includes(i)) {
+            tag.style.backgroundColor = colorTheme[0]
+        } else {
+            tag.style.backgroundColor = colorTheme[2]
+
+        }
         grid.append(tag)
         gridbox[i].addEventListener('mousedown', clicked )
     }
