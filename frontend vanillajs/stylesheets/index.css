@@ -70,8 +70,7 @@ body { position: absolute;
     -moz-user-select: none;
     /* left: 2rem; */
     font-size: 4rem;
-    right: 30rem;
-    bottom: 25rem;
+    left: 1rem;
     width: 11rem;
     background: transparent;
     border: none;
@@ -136,8 +135,8 @@ body { position: absolute;
     outline: solid 0.34rem;
     width: 20rem;
     height: 30rem;
-    left: 35rem;   
-    top: 5rem;
+    left: 35rem;  
+    top: 0.1rem; 
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -161,4 +160,29 @@ body { position: absolute;
 #scoreboard-title {
     position: relative;
     left: 3rem;
+}
+
+#time-box {
+    position: relative;
+    outline: solid 0.34rem;
+    width: 15rem;
+    height: 5rem;
+    right: 30rem;
+    top: 5rem;
+}
+
+#time-title {
+    position: relative;
+    left: 5rem;
+}
+
+#finished-time-title {
+    position: relative;
+    user-select: none;
+    -moz-user-select: none;
+    font-size: 4rem;
+    margin: 0;
+    left: 2rem;
+    width: 11rem;
+    font-weight: 800;
 }

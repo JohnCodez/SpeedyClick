@@ -15,6 +15,8 @@ currentScoreBox.style.outlineColor = colorTheme[1]
 currentScoreBox.style.backgroundColor = colorTheme[2]
 previousScoreBox.style.outlineColor = colorTheme[1]
 previousScoreBox.style.backgroundColor = colorTheme[2]
+timeBox.style.outlineColor = colorTheme[1]
+timeBox.style.backgroundColor = colorTheme[2]
 
 blackTheme.addEventListener('mouseenter', () => {blackTheme.style.cursor = "pointer"})
 blueTheme.addEventListener('mouseenter', () => {blueTheme.style.cursor = "pointer"})
@@ -29,6 +31,8 @@ function updateColorTheme() {
     currentScoreBox.style.backgroundColor = colorTheme[2]
     previousScoreBox.style.outlineColor = colorTheme[1]
     previousScoreBox.style.backgroundColor = colorTheme[2]
+    timeBox.style.outlineColor = colorTheme[1]
+    timeBox.style.backgroundColor = colorTheme[2]
     if (inGame == false) {
         grid.style.backgroundColor = colorTheme[2]
     } else {

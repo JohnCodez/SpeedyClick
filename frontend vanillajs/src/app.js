@@ -6,6 +6,7 @@ function start() {
     startButton = document.getElementById('start')
     startButton.remove()
     scoreBoardTitle.remove()
+    timeTitle.remove()
     inGame = true
 
     let timeNew = document.createElement("input")
@@ -14,7 +15,7 @@ function start() {
     timeNew.disabled = true
     timeNew.step = '0.1'
     timeNew.draggable = false
-    body.append(timeNew)
+    timeBox.append(timeNew)
     let time = document.getElementById('time')
     
     let scoreNew = document.createElement("input")
@@ -54,6 +55,7 @@ function start() {
             stopTime()
         } else if (time.value != 0) {
             time.value = Math.round(((time.value - 0.01) + Number.EPSILON) * 100) / 100
+            finishedTime = time.value
         } else {
             stopTime()
             gameEnd()
@@ -88,6 +90,13 @@ function gameEnd() {
         document.getElementById(i.toString()).remove()
     }
     changeColor(grid, colorTheme[2])
+
+    const newFinishedTimeTitle = document.createElement('h1')
+    newFinishedTimeTitle.innerText = parseFloat(finishedTime)
+    newFinishedTimeTitle.id = 'finished-time-title'
+    timeBox.append(newFinishedTimeTitle)
+    finishedTimeTitle = document.getElementById('finished-time-title')
+
     const endText = document.createElement("h1")
     const home = document.createElement("h1")
     endText.innerText = "Score: " + score.value
@@ -108,11 +117,21 @@ function goBackHome() {
     endText.remove()
     home.remove()
     score.remove()
+    finishedTimeTitle.remove()
+    
     const scoreboardTitle = document.createElement('h1')
     scoreboardTitle.innerText = "SCOREBOARD"
     scoreboardTitle.id = 'scoreboard-title'
     currentScoreBox.append(scoreboardTitle)
     scoreBoardTitle = document.getElementById('scoreboard-title')
+    
+    const newTimeTitle = document.createElement('h1')
+    newTimeTitle.innerText = "TIME"
+    newTimeTitle.id = 'time-title'
+    timeBox.append(newTimeTitle)
+    timeTitle = document.getElementById('time-title')
+    
+
     grid.style.flexDirection = 'row'
     let startNew = document.createElement("p")
     startNew.id = "start"
