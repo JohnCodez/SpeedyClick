@@ -5,8 +5,9 @@ function start() {
     // console.log("start")
     startButton = document.getElementById('start')
     startButton.remove()
+    scoreBoardTitle.remove()
     inGame = true
-    
+
     let timeNew = document.createElement("input")
     timeNew.id = "time"
     timeNew.type = 'number'
@@ -21,8 +22,10 @@ function start() {
     scoreNew.type = 'number'
     scoreNew.disabled = true
     scoreNew.draggable = false
-    body.append(scoreNew)
+    currentScoreBox.append(scoreNew)
     let score = document.getElementById('score')
+
+    setColors()
 
     for (let i = 0; i < startingBoxes; i++) {
         fullBoxes.push(getRandomBoxNumber())
@@ -77,7 +80,7 @@ function gameEnd() {
     // console.log("end")
     let score = document.getElementById('score')
     time.remove()
-    score.remove()
+    grid.style.flexDirection = 'column'
     inGame = false
     fullBoxes = []
     startTime = gameTime
@@ -104,6 +107,13 @@ function goBackHome() {
     // console.log("return")
     endText.remove()
     home.remove()
+    score.remove()
+    const scoreboardTitle = document.createElement('h1')
+    scoreboardTitle.innerText = "SCOREBOARD"
+    scoreboardTitle.id = 'scoreboard-title'
+    currentScoreBox.append(scoreboardTitle)
+    scoreBoardTitle = document.getElementById('scoreboard-title')
+    grid.style.flexDirection = 'row'
     let startNew = document.createElement("p")
     startNew.id = "start"
     startNew.innerText = "START"

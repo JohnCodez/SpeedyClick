@@ -6,6 +6,10 @@ const redTheme = document.getElementById('red-theme')
 
 const gridbox = document.getElementsByClassName('gridbox')
 const grid = document.getElementById('grid')
+const scoreBoard = document.getElementById('score-board')
+const currentScoreBox = document.getElementById('current-score-box')
+const previousScoreBox = document.getElementById('previous-score-box')
+let scoreBoardTitle = document.getElementById('scoreboard-title')
 
 let startButton = document.getElementById('start')
 

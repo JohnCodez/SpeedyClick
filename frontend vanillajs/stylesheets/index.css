@@ -41,6 +41,7 @@ body { position: absolute;
 }
 
 .gridbox {
+    position: relative;
     background-color: black;
     outline: rgb(87, 87, 87) solid 0.34rem;
     color: white;
@@ -68,28 +69,39 @@ body { position: absolute;
     user-select: none;
     -moz-user-select: none;
     /* left: 2rem; */
-    font-size: 2rem;
-    left: 10rem;
+    font-size: 4rem;
+    right: 30rem;
+    bottom: 25rem;
+    width: 11rem;
     background: transparent;
     border: none;
 }
 
 #score {
+    position: relative;
+    user-select: none;
+    -moz-user-select: none;
     background: transparent;
     border: none;
+    width: 10rem;
+    font-size: 4rem;
+    margin-left: 1rem;
 }
 
 #endText {
+    position: relative;
     font-size: 3rem;
     height: 4rem;
     width: 15rem;
-    
+    margin-left: 13rem;
 }
 
 #home {
-    position: absolute;
-    top: 30rem;
-    /* right: 8rem; */
+    position: relative;
+    height: 2rem;
+    width: 5.2rem;
+    margin: 0;
+    margin-left: 17rem;
 }
 
 #black-theme {
@@ -97,8 +109,8 @@ body { position: absolute;
     width: 3rem;
     height: 3rem;
     background-color: black;
-    left: 1rem;  
-    top: 5rem;
+    left: 3rem;  
+    top: 10rem;
 }
 
 #blue-theme {
@@ -106,8 +118,8 @@ body { position: absolute;
     width: 3rem;
     height: 3rem;
     background-color: blue;
-    left: 1rem;  
-    top: 8rem;
+    left: 3rem;    
+    top: 13rem;
 }
 
 #red-theme {
@@ -115,6 +127,38 @@ body { position: absolute;
     width: 3rem;
     height: 3rem;
     background-color: red;
-    left: 1rem;  
-    top: 11rem;
+    left: 3rem;   
+    top: 16rem;
+}
+
+#score-board {
+    position: relative;
+    outline: solid 0.34rem;
+    width: 20rem;
+    height: 30rem;
+    left: 35rem;   
+    top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#current-score-box {
+    position: relative;
+    outline: solid 0.34rem;
+    width: 20rem;
+    height: 5rem;
+}
+
+#previous-score-box {
+    position: relative;
+    outline: solid 0.34rem;
+    width: 20rem;
+    height: 25rem;
+}
+
+#scoreboard-title {
+    position: relative;
+    left: 3rem;
 }

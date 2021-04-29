@@ -4,6 +4,18 @@ grid.style.outlineColor = colorTheme[1]
 grid.style.backgroundColor = colorTheme[2]
 body.style.color = colorTheme[0]
 
+function setColors() {
+    document.getElementById('time').style.color = colorTheme[0]
+    document.getElementById('score').style.color = colorTheme[0]
+}
+
+scoreBoard.style.outlineColor = colorTheme[1]
+scoreBoard.style.backgroundColor = colorTheme[2]
+currentScoreBox.style.outlineColor = colorTheme[1]
+currentScoreBox.style.backgroundColor = colorTheme[2]
+previousScoreBox.style.outlineColor = colorTheme[1]
+previousScoreBox.style.backgroundColor = colorTheme[2]
+
 blackTheme.addEventListener('mouseenter', () => {blackTheme.style.cursor = "pointer"})
 blueTheme.addEventListener('mouseenter', () => {blueTheme.style.cursor = "pointer"})
 redTheme.addEventListener('mouseenter', () => {redTheme.style.cursor = "pointer"})
@@ -11,9 +23,16 @@ redTheme.addEventListener('mouseenter', () => {redTheme.style.cursor = "pointer"
 function updateColorTheme() {
     body.style.color = colorTheme[0]
     grid.style.outlineColor = colorTheme[1]
+    scoreBoard.style.outlineColor = colorTheme[1]
+    scoreBoard.style.backgroundColor = colorTheme[2]
+    currentScoreBox.style.outlineColor = colorTheme[1]
+    currentScoreBox.style.backgroundColor = colorTheme[2]
+    previousScoreBox.style.outlineColor = colorTheme[1]
+    previousScoreBox.style.backgroundColor = colorTheme[2]
     if (inGame == false) {
         grid.style.backgroundColor = colorTheme[2]
     } else {
+        setColors()
         for (let i = 0; i < 16; i++) {
             let box = document.getElementById(i.toString())
             box.style.outlineColor = colorTheme[1]
