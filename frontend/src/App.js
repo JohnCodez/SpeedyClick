@@ -1,89 +1,144 @@
-import React, { Component } from 'react'
-import './App.css';
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
-// import { Timer } from 'react-compound-timer'
-import Start from './Components/Start.js'
-import Game from './Components/Game.js'
-import End from './Components/End.js'
+// Start //
 
-class App extends Component {
+function start() {
+    // Setup
+    // console.log("start")
+    startButton = document.getElementById('start')
+    startButton.remove()
+    scoreBoardTitle.remove()
+    timeTitle.remove()
+    inGame = true
 
-  state={
-    score: 0,
-    inGame: false,
-    redirect: false,
-    seconds: 10
-  }
+    let timeNew = document.createElement("input")
+    timeNew.id = "time"
+    timeNew.type = 'number'
+    timeNew.disabled = true
+    timeNew.step = '0.1'
+    timeNew.draggable = false
+    timeBox.append(timeNew)
+    let time = document.getElementById('time')
+    
+    let scoreNew = document.createElement("input")
+    scoreNew.id = "score"
+    scoreNew.type = 'number'
+    scoreNew.disabled = true
+    scoreNew.draggable = false
+    currentScoreBox.append(scoreNew)
+    let score = document.getElementById('score')
 
-  handleAddPoints = () => {
-    this.setState({
-      score: this.state.score + 100
-    })
-    // console.log(Date.prototype.getSeconds)
-  }
+    setColors()
 
-  handleGameStatus = () => {
-    if (this.state.inGame) {
-      this.setState({
-        inGame: false
-      })
-    } else {
-      this.setState({
-        inGame: true
-      })
+    for (let i = 0; i < startingBoxes; i++) {
+        fullBoxes.push(getRandomBoxNumber())
     }
-  }
+    for (let i = 0; i < 16; i++) {
+        let tag = document.createElement("div")
+        tag.id = i
+        tag.className = 'gridbox'
+        tag.draggable = 'false'
+        tag.style.outlineColor = colorTheme[1]
+        if (fullBoxes.includes(i)) {
+            tag.style.backgroundColor = colorTheme[0]
+        } else {
+            tag.style.backgroundColor = colorTheme[2]
 
-  handleResetScore = () => {
-    this.setState({
-      score: 0,
-      seconds: 10,
-      redirect: false
-    })
-  }
+        }
+        grid.append(tag)
+        gridbox[i].addEventListener('mousedown', clicked )
+    }
+    score.value = 0
+    
+    // Time Control
+    time.value = startTime
+    const decreaseTime = setInterval(() => {
+        if (inGame == false) {
+            stopTime()
+        } else if (time.value != 0) {
+            time.value = Math.round(((time.value - 0.01) + Number.EPSILON) * 100) / 100
+            finishedTime = time.value
+        } else {
+            stopTime()
+            gameEnd()
+        }
+    }, 10)
 
+    
 
-  end = () => {
-    this.setState({
-      redirect: true
-    })
-  }
-
-  timer = () => {
-    console.log(this.state.seconds)
-    let interval = setInterval(() => {
-      if (this.state.seconds !== 0){
-        this.setState({
-          seconds: this.state.seconds - 1
-        })
-      }else{
-        clearInterval(interval) 
-        this.setState({
-          redirect: true,
-          inGame: false
-        })
-      }
-    }, 10000)
-    return null
-  }
-
-  render(){
-    return (
-      <Router>
-      <div className="App">
-        {this.state.inGame ? <div style={{height: '30%'}}><h1 style={{margin: '0'}}>Speedy Click</h1><br></br> <div style={{margin: '0'}}>Score: {this.state.score}</div> {this.timer()} Time: {this.state.seconds}</div>  : <div style={{height: '30%'}}><h1 style={{marginBottom: '1%', marginTop: '0'}}>Speedy Click</h1></div>}
-        {this.state.redirect ? <Redirect to='/end/' /> : console.log() }
-      <div className="window">  
-          <Switch>
-            <Route exact path='/game' render={() => <Game score={this.state.score} addPoints={this.handleAddPoints} changeGameStatus={this.handleGameStatus} end={this.end} />} />
-            <Route exact path='/end' render={() => <End score={this.state.score} resetScore={this.handleResetScore} />} />
-            <Route exact path='/' render={() => <Start changeGameStatus={this.handleGameStatus} />} />
-          </Switch>
-      </div>
-      </div>
-      </Router>
-    );
-  } 
+    function stopTime() {
+        clearInterval(decreaseTime)
+    }
+    
 }
 
-export default App;
+
+startButton.addEventListener( 'click', start )
+startButton.addEventListener( 'mouseenter', () => {
+    startButton.style.cursor = "pointer"
+})
+
+// End //
+
+function gameEnd() {
+    // console.log("end")
+    let score = document.getElementById('score')
+    time.remove()
+    grid.style.flexDirection = 'column'
+    inGame = false
+    fullBoxes = []
+    startTime = gameTime
+    for (let i = 0; i < 16; i++) {
+        document.getElementById(i.toString()).remove()
+    }
+    changeColor(grid, colorTheme[2])
+
+    const newFinishedTimeTitle = document.createElement('h1')
+    newFinishedTimeTitle.innerText = parseFloat(finishedTime)
+    newFinishedTimeTitle.id = 'finished-time-title'
+    timeBox.append(newFinishedTimeTitle)
+    finishedTimeTitle = document.getElementById('finished-time-title')
+
+    const endText = document.createElement("h1")
+    const home = document.createElement("h1")
+    endText.innerText = "Score: " + score.value
+    endText.id = "endText"
+    endText.draggable = false
+    home.innerText = "Home"
+    home.id = "home"
+    home.addEventListener('mouseenter', () => {home.style.cursor = "pointer"})
+    home.addEventListener('click', goBackHome)
+    grid.append(endText)
+    grid.append(home)
+}
+
+// Return //
+
+function goBackHome() {
+    // console.log("return")
+    endText.remove()
+    home.remove()
+    score.remove()
+    finishedTimeTitle.remove()
+    
+    const scoreboardTitle = document.createElement('h1')
+    scoreboardTitle.innerText = "SCOREBOARD"
+    scoreboardTitle.id = 'scoreboard-title'
+    currentScoreBox.append(scoreboardTitle)
+    scoreBoardTitle = document.getElementById('scoreboard-title')
+    
+    const newTimeTitle = document.createElement('h1')
+    newTimeTitle.innerText = "TIME"
+    newTimeTitle.id = 'time-title'
+    timeBox.append(newTimeTitle)
+    timeTitle = document.getElementById('time-title')
+    
+
+    grid.style.flexDirection = 'row'
+    let startNew = document.createElement("p")
+    startNew.id = "start"
+    startNew.innerText = "START"
+    startNew.addEventListener( 'click', start )
+    startNew.addEventListener( 'mouseenter', () => {
+        startNew.style.cursor = "pointer"
+    })
+    grid.append(startNew)
+}
