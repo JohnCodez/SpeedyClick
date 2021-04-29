@@ -33,8 +33,12 @@ function updateColorTheme() {
     previousScoreBox.style.backgroundColor = colorTheme[2]
     timeBox.style.outlineColor = colorTheme[1]
     timeBox.style.backgroundColor = colorTheme[2]
+
     if (inGame == false) {
         grid.style.backgroundColor = colorTheme[2]
+        if (inEndMenu == true){
+            document.getElementById('score').style.color = colorTheme[0]
+        }
     } else {
         setColors()
         for (let i = 0; i < 16; i++) {

@@ -84,6 +84,7 @@ function gameEnd() {
     time.remove()
     grid.style.flexDirection = 'column'
     inGame = false
+    inEndMenu = true
     fullBoxes = []
     startTime = gameTime
     for (let i = 0; i < 16; i++) {
@@ -118,6 +119,7 @@ function goBackHome() {
     home.remove()
     score.remove()
     finishedTimeTitle.remove()
+    inEndMenu = false
     
     const scoreboardTitle = document.createElement('h1')
     scoreboardTitle.innerText = "SCOREBOARD"

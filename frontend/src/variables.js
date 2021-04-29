@@ -21,6 +21,7 @@ let startTime = gameTime
 let finishedTime = 0
 let colorTheme = ['black', 'gray', 'darkgray']
 let inGame = false
+let inEndMenu = false
 
 let fullBoxes = []
 let startingBoxes = 2
