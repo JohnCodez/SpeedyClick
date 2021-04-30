@@ -31,7 +31,7 @@ function start() {
     for (let i = 0; i < startingBoxes; i++) {
         fullBoxes.push(getRandomBoxNumber())
     }
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < gridSize; i++) {
         let tag = document.createElement("div")
         tag.id = i
         tag.className = 'gridbox'

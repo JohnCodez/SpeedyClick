@@ -25,4 +25,5 @@ let inEndMenu = false
 
 let fullBoxes = []
 let startingBoxes = 2
+let gridSize = 16
 
