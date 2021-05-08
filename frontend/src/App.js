@@ -41,7 +41,6 @@ function start() {
             tag.style.backgroundColor = colorTheme[0]
         } else {
             tag.style.backgroundColor = colorTheme[2]
-
         }
         grid.append(tag)
         gridbox[i].addEventListener('mousedown', clicked )
