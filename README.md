@@ -1,4 +1,4 @@
-# SpeedyClick
+# SpeedyClick v0.11
 <br>
 Speedy click is a temporary name while the project is in Developement!
 
@@ -17,12 +17,12 @@ Everything in here is made by me!<br><br>
 
 # Version Notes
 
-## v0.10
+## v0.11
 This is the first function version of the game.<br><br>
 
 ### Features:
 4x4 Grid 
 Basic game mode in which you have to click the black squares as fast as possible. Each click gives 100 points. 20 second timer. Always 2 dark squares.
-Current score and Current time being tracked
-Color change available (blakc, blue, red)
+Current Score and Current Time being tracked
+Color change available (black, blue, red)
 
