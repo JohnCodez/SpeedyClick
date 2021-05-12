@@ -17,7 +17,7 @@ Everything in here is made by me!<br><br>
 
 # Version Notes
 
-## v0.11
+## v0.10
 This is the first function version of the game.<br><br>
 
 ### Features:
@@ -25,4 +25,7 @@ This is the first function version of the game.<br><br>
 Basic game mode in which you have to click the black squares as fast as possible. Each click gives 100 points. 20 second timer. Always 2 dark squares.
 Current Score and Current Time being tracked
 Color change available (black, blue, red)
+
+## v0.11
+Added Backend folder and fixed typos
 
