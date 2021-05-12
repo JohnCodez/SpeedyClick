@@ -43,3 +43,9 @@ Started GET "/favicon.ico" for ::1 at 2021-05-12 14:05:10 -0400
   
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
   
+  [1m[36mScoretable Load (0.8ms)[0m  [1m[34mSELECT "scoretables".* FROM "scoretables" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mScoretable Load (0.7ms)[0m  [1m[34mSELECT "scoretables".* FROM "scoretables"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mScoretable Create (1.0ms)[0m  [1m[32mINSERT INTO "scoretables" ("score", "player_id", "player_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["score", 9000], ["player_id", 1], ["player_name", "John"], ["created_at", "2021-05-12 19:17:02.639352"], ["updated_at", "2021-05-12 19:17:02.639352"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
