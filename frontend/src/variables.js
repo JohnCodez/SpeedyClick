@@ -3,6 +3,7 @@ const body = document.getElementById('body')
 const blackTheme = document.getElementById('black-theme')
 const blueTheme = document.getElementById('blue-theme')
 const redTheme = document.getElementById('red-theme')
+const customThemePicker = document.getElementById('custom-theme-picker')
 
 const gridbox = document.getElementsByClassName('gridbox')
 const grid = document.getElementById('grid')

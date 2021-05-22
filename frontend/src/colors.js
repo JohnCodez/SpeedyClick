@@ -18,10 +18,6 @@ previousScoreBox.style.backgroundColor = colorTheme[2]
 timeBox.style.outlineColor = colorTheme[1]
 timeBox.style.backgroundColor = colorTheme[2]
 
-blackTheme.addEventListener('mouseenter', () => {blackTheme.style.cursor = "pointer"})
-blueTheme.addEventListener('mouseenter', () => {blueTheme.style.cursor = "pointer"})
-redTheme.addEventListener('mouseenter', () => {redTheme.style.cursor = "pointer"})
-
 function updateColorTheme() {
     body.style.color = colorTheme[0]
     grid.style.outlineColor = colorTheme[1]
@@ -53,6 +49,11 @@ function updateColorTheme() {
     }
 }
 
+const randomColor = () => {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16)
+    return "#" + randomColor
+  }
+
 blackTheme.addEventListener('click', () => {
     colorTheme = ['black', 'gray', 'darkgray']
     updateColorTheme()
@@ -65,6 +66,12 @@ blueTheme.addEventListener('click', () => {
 })
 redTheme.addEventListener('click', () => {
     colorTheme = ['#B30000', '#CC0000', '#FF6666']
+    updateColorTheme()
+    
+})
+
+customThemePicker.addEventListener('click', () => {
+    colorTheme = [randomColor(), randomColor(), randomColor()]
     updateColorTheme()
     
 })

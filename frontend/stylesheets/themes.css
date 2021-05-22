@@ -5,6 +5,7 @@
     background-color: black;
     left: 3rem;  
     top: 10rem;
+    cursor: pointer;
 }
 
 #blue-theme {
@@ -14,6 +15,7 @@
     background-color: blue;
     left: 3rem;    
     top: 13rem;
+    cursor: pointer;
 }
 
 #red-theme {
@@ -23,4 +25,25 @@
     background-color: red;
     left: 3rem;   
     top: 16rem;
+    cursor: pointer;
+}
+
+#custom-theme-picker {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: black;
+    left: 3rem;   
+    top: 19rem;
+    cursor: pointer;
+}
+
+#custom-theme1, #custom-theme2, #custom-theme3  {
+    position: absolute;
+    width: 2.65rem;
+    height: 2.8rem;
+    left: 3rem;   
+    top: 23rem;
+    visibility: hidden;
+    cursor: pointer;
 }
