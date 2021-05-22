@@ -1,4 +1,4 @@
-# SpeedyClick v0.11
+# SpeedyClick v0.12
 <br>
 Speedy click is a temporary name while the project is in Developement!
 
@@ -17,6 +17,12 @@ Everything in here is made by me!<br><br>
 
 # Version Notes
 
+## v0.12
+Organized Files
+
+## v0.11
+Fixed typos
+
 ## v0.10
 This is the first function version of the game.<br><br>
 
@@ -26,6 +32,4 @@ Basic game mode in which you have to click the black squares as fast as possible
 Current Score and Current Time being tracked
 Color change available (black, blue, red)
 
-## v0.11
-Fixed typos
 
