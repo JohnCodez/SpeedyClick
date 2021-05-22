@@ -4,6 +4,13 @@ grid.style.outlineColor = colorTheme[1]
 grid.style.backgroundColor = colorTheme[2]
 body.style.color = colorTheme[0]
 
+customTheme1.value = colorTheme[0]
+customTheme2.value = colorTheme[1]
+customTheme3.value = colorTheme[2]
+customTheme1.style.visibility = 'hidden'
+customTheme2.style.visibility = 'hidden'
+customTheme3.style.visibility = 'hidden'
+
 function setColors() {
     document.getElementById('time').style.color = colorTheme[0]
     document.getElementById('score').style.color = colorTheme[0]
@@ -50,28 +57,98 @@ function updateColorTheme() {
 }
 
 const randomColor = () => {
-    const randomColor = Math.floor(Math.random()*16777215).toString(16)
+    const randomColor = Math.floor(Math.random() * 2 ** 24).toString(16).padStart(6, "0")
     return "#" + randomColor
   }
 
 blackTheme.addEventListener('click', () => {
-    colorTheme = ['black', 'gray', 'darkgray']
+    colorTheme = ['#000000', '#808080', '#a9a9a9']
     updateColorTheme()
+    customTheme1.value = colorTheme[0]
+    customTheme2.value = colorTheme[1]
+    customTheme3.value = colorTheme[2]
     
 })
 blueTheme.addEventListener('click', () => {
-    colorTheme = ['#000080', '#000066', 'lightblue']
+    colorTheme = ['#000080', '#000066', '#add8e6']
     updateColorTheme()
-    
+    customTheme1.value = colorTheme[0]
+    customTheme2.value = colorTheme[1]
+    customTheme3.value = colorTheme[2]
 })
 redTheme.addEventListener('click', () => {
     colorTheme = ['#B30000', '#CC0000', '#FF6666']
     updateColorTheme()
-    
+    customTheme1.value = colorTheme[0]
+    customTheme2.value = colorTheme[1]
+    customTheme3.value = colorTheme[2]
+})
+
+const moveDown = (element, times) => {
+    for (let i = 0; i < times; i++) {
+        setTimeout(() => {element.style.top = `${parseInt(getComputedStyle(element).top) + 1}px`}, 10)
+    }
+}
+
+const moveUp = (element, times) => {
+    for (let i = 0; i < times; i++) {
+        setTimeout(() => {element.style.top = `${parseInt(getComputedStyle(element).top) - 1}px`}, 10)
+    }
+}
+
+colorDropdown.addEventListener('click', () => {
+    if (customTheme1.style.visibility === 'hidden'){
+        customTheme1.style.visibility = 'visible'
+        customTheme2.style.visibility = 'visible'
+        customTheme3.style.visibility = 'visible'
+
+        moveDown(customTheme1, 10)
+        moveDown(customTheme2, 58)
+        moveDown(customTheme3, 106)
+    } else {
+        customTheme1.style.visibility = 'hidden'
+        customTheme2.style.visibility = 'hidden'
+        customTheme3.style.visibility = 'hidden'
+
+        moveUp(customTheme1, 10)
+        moveUp(customTheme2, 58)
+        moveUp(customTheme3, 106)
+    }
+
 })
 
 customThemePicker.addEventListener('click', () => {
+    let c1, c2, c3
+    c1 = randomColor()
+    c2 = randomColor()
+    c3 = randomColor()
+    
+    while (c2 === c1){
+        c2.randomColor()
+    }
+    
+    while (c3 === c2 && c3 === c1){
+        c3.randomColor()
+    }
+    customTheme1.value = c1
+    customTheme2.value = c2
+    customTheme3.value = c3
     colorTheme = [randomColor(), randomColor(), randomColor()]
     updateColorTheme()
     
+})
+
+customTheme1.addEventListener('input', () => {
+    colorTheme[0] = customTheme1.value
+    updateColorTheme()
+})
+
+customTheme2.addEventListener('input', () => {
+    colorTheme[1] = customTheme2.value
+    updateColorTheme()
+})
+
+customTheme3.addEventListener('input', () => {
+    colorTheme[2] = customTheme3.value
+    updateColorTheme()
 })

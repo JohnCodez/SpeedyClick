@@ -1,4 +1,4 @@
-# SpeedyClick v0.12
+# SpeedyClick v0.20
 <br>
 Speedy click is a temporary name while the project is in Developement!
 
@@ -17,6 +17,10 @@ Everything in here is made by me!<br><br>
 
 # Version Notes
 
+## v0.20
+-Random color button
+-Added three color fields to track the current three colors and change them individually
+
 ## v0.12
 Organized Files
 
@@ -27,9 +31,9 @@ Fixed typos
 This is the first function version of the game.<br><br>
 
 ### Features:
-4x4 Grid 
-Basic game mode in which you have to click the black squares as fast as possible. Each click gives 100 points. 20 second timer. Always 2 dark squares.
-Current Score and Current Time being tracked
-Color change available (black, blue, red)
+-4x4 Grid 
+-Basic game mode in which you have to click the black squares as fast as       possible. Each click gives 100 points. 20 second timer. Always 2 dark squares.
+-Current Score and Current Time being tracked
+-Color change available (black, blue, red)
 
 
