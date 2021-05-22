@@ -1,0 +1,62 @@
+#game {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 120%;
+}
+
+#grid {
+    position: relative;
+    outline: solid 0.34rem;
+    width: 40rem;
+    height: 40rem;
+    top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+.gridbox {
+    position: relative;
+    background-color: black;
+    outline: rgb(87, 87, 87) solid 0.34rem;
+    color: white;
+    height: 10rem;
+    width: 10rem;
+    margin: 0;
+    /* margin-right: 1rem; */
+    /* margin-bottom: 1rem; */
+}
+
+
+#start {
+    position: relative;
+    user-select: none;
+    -moz-user-select: none;
+    margin: 0;
+    top: 15rem;
+    font-size: 8rem;
+    height: 9rem;
+    width: 24rem;
+}
+
+#endText {
+    position: relative;
+    font-size: 3rem;
+    height: 4rem;
+    width: 15rem;
+    margin-left: 13rem;
+}
+
+#home {
+    position: relative;
+    height: 2rem;
+    width: 5.2rem;
+    margin: 0;
+    margin-left: 17rem;
+}

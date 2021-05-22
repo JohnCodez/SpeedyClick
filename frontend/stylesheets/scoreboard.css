@@ -1,0 +1,42 @@
+#score {
+    position: relative;
+    user-select: none;
+    -moz-user-select: none;
+    background: transparent;
+    border: none;
+    width: 10rem;
+    font-size: 4rem;
+    margin-left: 1rem;
+}
+
+#score-board {
+    position: relative;
+    outline: solid 0.34rem;
+    width: 20rem;
+    height: 30rem;
+    left: 35rem;  
+    top: 0.1rem; 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#current-score-box {
+    position: relative;
+    outline: solid 0.34rem;
+    width: 20rem;
+    height: 5rem;
+}
+
+#previous-score-box {
+    position: relative;
+    outline: solid 0.34rem;
+    width: 20rem;
+    height: 25rem;
+}
+
+#scoreboard-title {
+    position: relative;
+    left: 3rem;
+}

@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speedy Click</title>
     <link rel="stylesheet" href="stylesheets/index.css">
+    <link rel="stylesheet" href="stylesheets/grid.css">
+    <link rel="stylesheet" href="stylesheets/scoreboard.css">
+    <link rel="stylesheet" href="stylesheets/time.css">
+    <link rel="stylesheet" href="stylesheets/themes.css">
     <script src="src/variables.js" defer></script>
     <script src="src/gridboxes.js" defer></script>
     <script src="src/colors.js" defer></script>
@@ -16,9 +20,9 @@
 <body id='body'>
     <h1 id='title' dragable="false">Speedy Click</h1>
     <div id='game' dragable="false">
-    <div id='grid' dragable="false">
-        <p id='start'>START</p>
-    </div>
+        <div id='grid' dragable="false">
+            <p id='start'>START</p>
+        </div>
     </div>
     <div id=time-box>
         <h1 id='time-title'>TIME</h1>
@@ -32,5 +36,6 @@
     <div id='black-theme'></div>
     <div id='blue-theme'></div>
     <div id='red-theme'></div>
+    <input id='custom-theme' type='color'></input>
 </body>
 </html>

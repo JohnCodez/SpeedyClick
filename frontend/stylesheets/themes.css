@@ -1,0 +1,26 @@
+#black-theme {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: black;
+    left: 3rem;  
+    top: 10rem;
+}
+
+#blue-theme {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: blue;
+    left: 3rem;    
+    top: 13rem;
+}
+
+#red-theme {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: red;
+    left: 3rem;   
+    top: 16rem;
+}
