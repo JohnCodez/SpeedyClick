@@ -27,5 +27,5 @@ Current Score and Current Time being tracked
 Color change available (black, blue, red)
 
 ## v0.11
-Added Backend folder and fixed typos
+Fixed typos
 
