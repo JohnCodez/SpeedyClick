@@ -22,12 +22,12 @@ function goBackHome() {
     
 
     grid.style.flexDirection = 'row'
-    let startNew = document.createElement("p")
-    startNew.id = "start"
-    startNew.innerText = "START"
-    startNew.addEventListener( 'click', start )
-    startNew.addEventListener( 'mouseenter', () => {
-        startNew.style.cursor = `url(${cursorPointer}), pointer`
+    let classicNew = document.createElement("p")
+    classicNew.id = "classic"
+    classicNew.innerText = "Classic"
+    classicNew.addEventListener( 'click', classic )
+    classicNew.addEventListener( 'mouseenter', () => {
+        classicNew.style.cursor = `url(${cursorPointer}), pointer`
     })
-    grid.append(startNew)
+    grid.append(classicNew)
 }

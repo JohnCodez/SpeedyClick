@@ -1,4 +1,4 @@
-# SpeedyClick v0.30
+# SpeedyClick v0.40
 <br>
 Speedy click is a temporary name while the project is in Developement!
 
@@ -16,6 +16,9 @@ Everything in here is made by me!<br><br>
 <br><br>
 
 # Version Notes
+
+## v0.40
+-Changed Start button to Classic that starts the classic gamemode (To make sense when adding new gamemodes)
 
 ## v0.30
 -Added custom cursor toggle button
@@ -41,7 +44,7 @@ This is the first function version of the game.<br><br>
 
 ### Features:
 -4x4 Grid <br><br>
--Basic game mode in which you have to click the black squares as fast as       possible. Each click gives 100 points. 20 second timer. Always 2 dark squares.<br><br>
+-Basic game mode in which you have to click the black squares as fast as possible. Each click gives 100 points. 20 second timer. Always 2 dark squares.<br><br>
 -Current Score and Current Time being tracked<br><br>
 -Color change available (black, blue, red)<br><br>
 

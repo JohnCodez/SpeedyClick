@@ -23,7 +23,7 @@ let scoreBoardTitle = document.getElementById('scoreboard-title')
 let timeTitle = document.getElementById('time-title')
 let finishedTimeTitle = document.getElementById('finished-time-title')
 
-let startButton = document.getElementById('start')
+let classicButton = document.getElementById('classic')
 
 let gameTime = 20
 let startTime = gameTime

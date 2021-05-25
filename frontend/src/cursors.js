@@ -10,12 +10,12 @@ function updateCursor() {
     customTheme2.style.cursor = `url(${cursorPointer}), pointer`
     customTheme3.style.cursor = `url(${cursorPointer}), pointer`
 
-    let selectStart = document.getElementById('start')
+    let selectClassic = document.getElementById('classic')
     let selectEnd = document.getElementById('endText')
     let selectHome = document.getElementById('home')
 
-    if(selectStart){
-        selectStart.style.cursor = `url(${cursorPointer}), pointer`
+    if(selectClassic){
+        selectClassic.style.cursor = `url(${cursorPointer}), pointer`
     }
     if(selectEnd){
         selectEnd.style.cursor = `url(${cursorPointer}), pointer`

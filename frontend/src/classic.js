@@ -1,10 +1,8 @@
-// Start //
+// Classic Gamemode //
 
-function start() {
-    // Setup
-    // console.log("start")
-    startButton = document.getElementById('start')
-    startButton.remove()
+function classic() {
+    classicButton = document.getElementById('classic')
+    classicButton.remove()
     scoreBoardTitle.remove()
     timeTitle.remove()
     inGame = true
@@ -70,7 +68,7 @@ function start() {
 }
 
 
-startButton.addEventListener( 'click', start )
-startButton.addEventListener( 'mouseenter', () => {
-    startButton.style.cursor = `url(${cursorPointer}), pointer`
+classicButton.addEventListener( 'click', classic )
+classicButton.addEventListener( 'mouseenter', () => {
+    classicButton.style.cursor = `url(${cursorPointer}), pointer`
 })
