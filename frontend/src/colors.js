@@ -134,9 +134,7 @@ customThemePicker.addEventListener('click', () => {
     while (c3 === c2 && c3 === c1){
         c3.randomColor()
     }
-
-    console.log(`1 ${c1} - 2 ${c2} - 3 ${c3}`)
-
+    
     customTheme1.value = c1
     customTheme2.value = c2
     customTheme3.value = c3

@@ -1,4 +1,4 @@
-# SpeedyClick v0.21
+# SpeedyClick v0.22
 <br>
 Speedy click is a temporary name while the project is in Developement!
 
@@ -16,6 +16,9 @@ Everything in here is made by me!<br><br>
 <br><br>
 
 # Version Notes
+
+# v0.22
+-Removed testing color console.logs
 
 ## v0.21
 -Fixed inaccurate color tracking bug
