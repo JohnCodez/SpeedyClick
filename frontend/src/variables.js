@@ -9,6 +9,10 @@ const customTheme2 = document.getElementById('custom-theme2')
 const customTheme3 = document.getElementById('custom-theme3')
 const colorDropdown = document.getElementById('color-dropdown')
 
+let cursorDefault = 'default'
+let cursorPointer = 'pointer'
+const cursorSwap = document.getElementById('cursor-swap')
+
 const gridbox = document.getElementsByClassName('gridbox')
 const grid = document.getElementById('grid')
 const scoreBoard = document.getElementById('score-board')

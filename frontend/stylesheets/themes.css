@@ -1,3 +1,13 @@
+#cursor-swap {
+    position: absolute;
+    width: 22px;
+    height: 32px;
+    left: 3.9rem;  
+    top: 6rem;
+    background-image: url('https://cdn.custom-cursor.com/db/2/32/pointer2.png') ;
+    background-repeat: no-repeat;
+}
+
 #black-theme {
     position: absolute;
     width: 3rem;

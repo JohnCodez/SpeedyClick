@@ -1,4 +1,4 @@
-# SpeedyClick v0.22
+# SpeedyClick v0.30
 <br>
 Speedy click is a temporary name while the project is in Developement!
 
@@ -17,7 +17,10 @@ Everything in here is made by me!<br><br>
 
 # Version Notes
 
-# v0.22
+## v0.30
+-Added custom cursor toggle button
+
+## v0.22
 -Removed testing color console.logs
 
 ## v0.21

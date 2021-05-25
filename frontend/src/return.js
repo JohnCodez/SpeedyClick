@@ -27,7 +27,7 @@ function goBackHome() {
     startNew.innerText = "START"
     startNew.addEventListener( 'click', start )
     startNew.addEventListener( 'mouseenter', () => {
-        startNew.style.cursor = "pointer"
+        startNew.style.cursor = `url(${cursorPointer}), pointer`
     })
     grid.append(startNew)
 }

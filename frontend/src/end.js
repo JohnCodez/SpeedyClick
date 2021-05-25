@@ -27,7 +27,7 @@ function gameEnd() {
     endText.draggable = false
     home.innerText = "Home"
     home.id = "home"
-    home.addEventListener('mouseenter', () => {home.style.cursor = "pointer"})
+    home.addEventListener('mouseenter', () => {home.style.cursor = `url(${cursorPointer}), pointer`})
     home.addEventListener('click', goBackHome)
     grid.append(endText)
     grid.append(home)

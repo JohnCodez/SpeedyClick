@@ -72,5 +72,5 @@ function start() {
 
 startButton.addEventListener( 'click', start )
 startButton.addEventListener( 'mouseenter', () => {
-    startButton.style.cursor = "pointer"
+    startButton.style.cursor = `url(${cursorPointer}), pointer`
 })
