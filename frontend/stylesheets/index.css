@@ -5,14 +5,15 @@ body { position: absolute;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    /* font-family: 'Odibee Sans', cursive; */
     /* -webkit-text-stroke-width: 0.1rem;
     -webkit-text-stroke-color: black; */
 }
 
 #title{
-    position: relative;
+    position: absolute;
     user-select: none;
     -moz-user-select: none;
-    /* color: violet; */
-    /* left: 45%; */
+    font-family: 'Odibee Sans', cursive;
+    font-size: 3.5rem;
 }

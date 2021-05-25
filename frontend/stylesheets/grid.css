@@ -35,14 +35,25 @@
 
 
 #classic {
-    position: relative;
+    position: absolute;
     user-select: none;
     -moz-user-select: none;
     margin: 0;
-    top: 15rem;
-    font-size: 8rem;
-    height: 9rem;
-    width: 24rem;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+}
+
+#speed {
+    position: absolute;
+    user-select: none;
+    -moz-user-select: none;
+    margin: 0;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
 }
 
 #endText {

@@ -1,5 +1,6 @@
 const body = document.getElementById('body')
 
+// Theme
 const blackTheme = document.getElementById('black-theme')
 const blueTheme = document.getElementById('blue-theme')
 const redTheme = document.getElementById('red-theme')
@@ -13,6 +14,7 @@ let cursorDefault = 'default'
 let cursorPointer = 'pointer'
 const cursorSwap = document.getElementById('cursor-swap')
 
+// Grid, Time panel, and Score panel
 const gridbox = document.getElementsByClassName('gridbox')
 const grid = document.getElementById('grid')
 const scoreBoard = document.getElementById('score-board')
@@ -23,7 +25,6 @@ let scoreBoardTitle = document.getElementById('scoreboard-title')
 let timeTitle = document.getElementById('time-title')
 let finishedTimeTitle = document.getElementById('finished-time-title')
 
-let classicButton = document.getElementById('classic')
 
 let gameTime = 20
 let startTime = gameTime
@@ -36,3 +37,5 @@ let fullBoxes = []
 let startingBoxes = 2
 let gridSize = 16
 
+// Gamemodes
+const classicTime = 20

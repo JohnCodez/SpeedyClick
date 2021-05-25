@@ -1,37 +1,37 @@
 function updateCursor() {
-    body.style.cursor = `url(${cursorDefault}), default`
+    body.style.cursor = cursorDefault
 
-    blackTheme.style.cursor = `url(${cursorPointer}), pointer`
-    blueTheme.style.cursor = `url(${cursorPointer}), pointer`
-    redTheme.style.cursor = `url(${cursorPointer}), pointer`
-    customThemePicker.style.cursor = `url(${cursorPointer}), pointer`
-    colorDropdown.style.cursor = `url(${cursorPointer}), pointer`
-    customTheme1.style.cursor = `url(${cursorPointer}), pointer`
-    customTheme2.style.cursor = `url(${cursorPointer}), pointer`
-    customTheme3.style.cursor = `url(${cursorPointer}), pointer`
+    blackTheme.style.cursor = cursorPointer
+    blueTheme.style.cursor = cursorPointer
+    redTheme.style.cursor = cursorPointer
+    customThemePicker.style.cursor = cursorPointer
+    colorDropdown.style.cursor = cursorPointer
+    customTheme1.style.cursor = cursorPointer
+    customTheme2.style.cursor = cursorPointer
+    customTheme3.style.cursor = cursorPointer
 
     let selectClassic = document.getElementById('classic')
     let selectEnd = document.getElementById('endText')
     let selectHome = document.getElementById('home')
 
     if(selectClassic){
-        selectClassic.style.cursor = `url(${cursorPointer}), pointer`
+        selectClassic.style.cursor = cursorPointer
     }
     if(selectEnd){
-        selectEnd.style.cursor = `url(${cursorPointer}), pointer`
+        selectEnd.style.cursor = cursorPointer
     }
     if(selectHome){
-        selectHome.style.cursor = `url(${cursorPointer}), pointer`
+        selectHome.style.cursor = cursorPointer
     }
 }
 
 cursorSwap.addEventListener('click', () => {
-    if(cursorDefault === 'https://cdn.custom-cursor.com/db/2/32/pointer2.png' ){
+    if(cursorDefault === 'url(https://cdn.custom-cursor.com/db/2/32/pointer2.png)' ){
         cursorDefault = 'default'
         cursorPointer = 'pointer'
     } else {
-        cursorDefault = 'https://cdn.custom-cursor.com/db/2/32/pointer2.png'
-        cursorPointer = 'https://cdn.custom-cursor.com/db/1/32/pointer1.png'
+        cursorDefault = 'url(https://cdn.custom-cursor.com/db/2/32/pointer2.png), default'
+        cursorPointer = 'url(https://cdn.custom-cursor.com/db/1/32/pointer1.png), pointer'
     }
 
     updateCursor()

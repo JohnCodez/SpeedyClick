@@ -1,4 +1,4 @@
-# SpeedyClick v0.40
+# SpeedyClick v0.41
 <br>
 Speedy click is a temporary name while the project is in Developement!
 
@@ -16,6 +16,14 @@ Everything in here is made by me!<br><br>
 <br><br>
 
 # Version Notes
+
+## v0.41
+-Major refactor, split main file into start, score, time, gridboxes to allow new gamemodes<br><br>
+-Fixed cursors errors <br><br>
+-Made dynamic way to add home grid buttons<br><br>
+-Made dynamic way to add and start gamemodes with different times
+-Classic gamemode has 20 seconds <br><br>
+-New game mode Speed has 5 seconds
 
 ## v0.40
 -Changed Start button to Classic that starts the classic gamemode (To make sense when adding new gamemodes)
