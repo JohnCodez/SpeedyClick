@@ -1,4 +1,4 @@
-# SpeedyClick v0.20
+# SpeedyClick v0.21
 <br>
 Speedy click is a temporary name while the project is in Developement!
 
@@ -16,6 +16,9 @@ Everything in here is made by me!<br><br>
 <br><br>
 
 # Version Notes
+
+## v0.21
+-Fixed inaccurate color tracking bug
 
 ## v0.20
 -Random color button<br><br>

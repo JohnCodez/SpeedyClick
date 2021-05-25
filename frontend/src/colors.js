@@ -57,8 +57,12 @@ function updateColorTheme() {
 }
 
 const randomColor = () => {
-    const randomColor = Math.floor(Math.random() * 2 ** 24).toString(16).padStart(6, "0")
-    return "#" + randomColor
+    const colorComponents = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E']
+    let newColor = '#'
+    for (var i = 0; i < 6; i++){
+        newColor = newColor + colorComponents[Math.floor(Math.random() * colorComponents.length)]
+    }
+    return newColor
   }
 
 blackTheme.addEventListener('click', () => {
@@ -130,10 +134,13 @@ customThemePicker.addEventListener('click', () => {
     while (c3 === c2 && c3 === c1){
         c3.randomColor()
     }
+
+    console.log(`1 ${c1} - 2 ${c2} - 3 ${c3}`)
+
     customTheme1.value = c1
     customTheme2.value = c2
     customTheme3.value = c3
-    colorTheme = [randomColor(), randomColor(), randomColor()]
+    colorTheme = [c1, c2, c3]
     updateColorTheme()
     
 })
