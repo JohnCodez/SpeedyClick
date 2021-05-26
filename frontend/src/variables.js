@@ -26,9 +26,6 @@ let timeTitle = document.getElementById('time-title')
 let finishedTimeTitle = document.getElementById('finished-time-title')
 
 
-let gameTime = 20
-let startTime = gameTime
-let finishedTime = 0
 let colorTheme = ['#000000', '#808080', '#a9a9a9']
 let inGame = false
 let inEndMenu = false
@@ -36,7 +33,4 @@ let inEndMenu = false
 let fullBoxes = []
 let startingBoxes = 2
 let gridSize = 16
-
-// Gamemodes
-const classicTime = 20
-const speedTime = 5
+const timeNotification = document.getElementById('time-change-notification')

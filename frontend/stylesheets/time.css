@@ -34,3 +34,15 @@
     width: 11rem;
     font-weight: 800;
 }
+
+#time-change-notification {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    left: 3rem;
+    top: 6rem;
+    font-size: 3rem;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3rem;  
+}

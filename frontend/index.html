@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="stylesheets/time.css">
     <link rel="stylesheet" href="stylesheets/themes.css">
     <script src="src/variables.js" defer></script>
+    <script src="src/gamemodeTimes.js" defer></script>
     <script src="src/gridboxes.js" defer></script>
     <script src="src/time.js" defer></script>
+    <script src="src/timeChangeNotification.js" defer></script>
     <script src="src/score.js" defer></script>
     <script src="src/colors.js" defer></script>
     <script src="src/cursors.js" defer></script>
@@ -23,7 +25,9 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
     </style>
-</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
 <body id='body'>
     <h1 id='title' dragable="false">Speedy Click</h1>
     
@@ -34,6 +38,7 @@
     
     <div id=time-box>
         <h1 id='time-title'>TIME</h1>
+        <div id='time-change-notification'></div>
     </div>
 
     <div id='score-board'>

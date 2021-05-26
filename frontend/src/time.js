@@ -13,7 +13,7 @@ function playTime() {
         // console.log(startTime)
         if (inGame == false) {
             stopTime()
-        } else if (time.value != 0) {
+        } else if (time.value > 0) {
             time.value = Math.round(((time.value - 0.01) + Number.EPSILON) * 100) / 100
             finishedTime = time.value
         } else {
@@ -21,8 +21,14 @@ function playTime() {
             gameEnd()
         }
     }, 10)
-    
+
     function stopTime() {
         clearInterval(decreaseTime)
     }
+}
+
+function addTime(seconds) {
+    let selectTime = document.getElementById('time')
+    selectTime.value = parseFloat(selectTime.value) + parseFloat(seconds)
+    changeTimeNotification(seconds)
 }

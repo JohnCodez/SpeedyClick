@@ -21,6 +21,7 @@ function goBackHome() {
 
 
     grid.style.flexDirection = 'row'
-    insertButtons('classic', classicTime)
-    insertButtons('speed', speedTime)
+    insertButtons('classic', classicTime, 0, 0)
+    insertButtons('speed', speedTime, 0, 0)
+    insertButtons('survivor', survivorTime, 0, survivorLoseTime)
 }

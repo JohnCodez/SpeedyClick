@@ -1,4 +1,4 @@
-# SpeedyClick v0.42
+# SpeedyClick v0.43
 <br>
 Speedy click is a temporary name while the project is in Developement!
 
@@ -6,7 +6,7 @@ You can test play it at https://speedy-click.netlify.app/ or by downloading the 
 If the above link is not working, the site is most likely down for maintainance. This will be updated if the link changes.
 
 The game is entirely built in the frontend folder.
-This uses Javascript, HTML, and CSS
+This uses Javascript, HTML, and CSS, Jquery
 
 The Leaderboard and account systems will be built in the backend folder.
 This uses custom rails API's 
@@ -16,6 +16,10 @@ Everything in here is made by me!<br><br>
 <br><br>
 
 # Version Notes
+
+## v0.43
+-Gamemode can now be made to add time on Dark square Click and not fail on Light click (instead lose time) + notification on time change<br><br>
+-New Gamemode survivor - 30 Seconds, white squares take off 1 second
 
 ## v0.42
 -Fixed bugs and changed hard coded values to variables

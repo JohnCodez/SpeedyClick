@@ -43,9 +43,12 @@ function clicked(event) {
         fullBoxes = fullBoxes.filter(box => box != (event.target.id))
         changeColor(event.target, colorTheme[2])
         score.value = parseInt(score.value) + 100
+        addTime(timeChangeOnDarkClick)
 
         fullBoxes.push(newFullBox)
         document.getElementById(newFullBox).style.backgroundColor = colorTheme[0]
+    } else if (timeChangeOnLightClick !== 0){
+        addTime(timeChangeOnLightClick)
     } else {
         gameEnd()
     }
