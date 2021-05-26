@@ -1,7 +1,6 @@
 // Return //
 
 function goBackHome() {
-    // console.log("return")
     endText.remove()
     home.remove()
     score.remove()
@@ -23,5 +22,5 @@ function goBackHome() {
 
     grid.style.flexDirection = 'row'
     insertButtons('classic', classicTime)
-    insertButtons('speed', 5)
+    insertButtons('speed', speedTime)
 }

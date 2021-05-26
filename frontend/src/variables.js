@@ -39,3 +39,4 @@ let gridSize = 16
 
 // Gamemodes
 const classicTime = 20
+const speedTime = 5

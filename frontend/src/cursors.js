@@ -26,13 +26,12 @@ function updateCursor() {
 }
 
 cursorSwap.addEventListener('click', () => {
-    if(cursorDefault === 'url(https://cdn.custom-cursor.com/db/2/32/pointer2.png)' ){
+    if(cursorDefault === 'url(https://cdn.custom-cursor.com/db/2/32/pointer2.png), default' ){
         cursorDefault = 'default'
         cursorPointer = 'pointer'
     } else {
         cursorDefault = 'url(https://cdn.custom-cursor.com/db/2/32/pointer2.png), default'
         cursorPointer = 'url(https://cdn.custom-cursor.com/db/1/32/pointer1.png), pointer'
     }
-
     updateCursor()
 })

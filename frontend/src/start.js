@@ -14,7 +14,6 @@ function start(enteredTime) {
 }
 
 function insertButtons(name, enteredTime) {
-    console.log(enteredTime)
     window[name] = document.createElement("p")
     window[name].id = name
     window[name].innerText = name.charAt(0).toUpperCase() + name.slice(1)
@@ -26,4 +25,4 @@ function insertButtons(name, enteredTime) {
 }
 
 insertButtons('classic', classicTime)
-insertButtons('speed', 5)
+insertButtons('speed', speedTime)
