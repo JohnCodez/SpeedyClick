@@ -1,4 +1,4 @@
-# SpeedyClick v0.43
+# SpeedyClick v0.44
 <br>
 Speedy click is a temporary name while the project is in Developement!
 
@@ -16,6 +16,9 @@ Everything in here is made by me!<br><br>
 <br><br>
 
 # Version Notes
+
+## v0.44
+-New visuals and bug fixes
 
 ## v0.43
 -Gamemode can now be made to add time on Dark square Click and not fail on Light click (instead lose time) + notification on time change<br><br>

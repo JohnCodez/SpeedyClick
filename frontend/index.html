@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="SC logo.png"/>
     <title>Speedy Click</title>
     <link rel="stylesheet" href="stylesheets/index.css">
     <link rel="stylesheet" href="stylesheets/grid.css">
@@ -22,41 +23,43 @@
     <script src="src/end.js" defer></script>
     <script src="src/return.js" defer></script>
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
-    </style>
+    <style> @import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');</style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    </head>
+</head>
+
 <body id='body'>
-    <h1 id='title' dragable="false">Speedy Click</h1>
-    
-    <div id='game' dragable="false">
-        <div id='grid' dragable="false">
+    <h1 id='title' dragable="false">Speedy<span style='color: rgb(0, 255, 242)'>Click</span></h1>
+    <div id='body-without-title'>
+        <div id='game' dragable="false">
+            <div id='grid' dragable="false">
+            </div>
+        </div>
+        
+        <div id=time-box>
+            <h1 id='time-title'>TIME</h1>
+            <div id='time-change-notification'></div>
+        </div>
+
+        <div id='score-board'>
+            <div id='current-score-box'>
+                <h1 id='scoreboard-title'>SCOREBOARD</h1>
+            </div>
+            <div id='previous-score-box'></div>
+        </div>
+
+        <div id='theme-toolbar'>
+            <div id='cursor-swap'></div>
+            <div id='black-theme'></div>
+            <div id='blue-theme'></div>
+            <div id='red-theme'></div>
+
+            <button id='color-dropdown' type='dropdown'>-</button>
+            <img id='custom-theme-picker' src='https://i.ibb.co/Xytp4rM/PFUOuGB.png'></img>
+            <input id='custom-theme1' type='color'></input>
+            <input id='custom-theme2' type='color'></input>
+            <input id='custom-theme3' type='color'></input>
         </div>
     </div>
-    
-    <div id=time-box>
-        <h1 id='time-title'>TIME</h1>
-        <div id='time-change-notification'></div>
-    </div>
-
-    <div id='score-board'>
-        <div id='current-score-box'>
-            <h1 id='scoreboard-title'>SCOREBOARD</h1>
-        </div>
-        <div id='previous-score-box'></div>
-    </div>
-
-    <div id='cursor-swap'></div>
-    <div id='black-theme'></div>
-    <div id='blue-theme'></div>
-    <div id='red-theme'></div>
-
-    <button id='color-dropdown' type='dropdown'>-</button>
-    <img id='custom-theme-picker' src='https://i.ibb.co/Xytp4rM/PFUOuGB.png'></img>
-    <input id='custom-theme1' type='color'></input>
-    <input id='custom-theme2' type='color'></input>
-    <input id='custom-theme3' type='color'></input>
 </body>
 </html>

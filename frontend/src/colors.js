@@ -2,7 +2,9 @@
 
 grid.style.outlineColor = colorTheme[1]
 grid.style.backgroundColor = colorTheme[2]
-body.style.color = colorTheme[0]
+bodyWithoutTitle.style.color = colorTheme[0]
+themeToolbar.style.backgroundColor = colorTheme[2]
+themeToolbar.style.borderColor = colorTheme[1]
 
 customTheme1.value = colorTheme[0]
 customTheme2.value = colorTheme[1]
@@ -26,7 +28,7 @@ timeBox.style.outlineColor = colorTheme[1]
 timeBox.style.backgroundColor = colorTheme[2]
 
 function updateColorTheme() {
-    body.style.color = colorTheme[0]
+    bodyWithoutTitle.style.color = colorTheme[0]
     grid.style.outlineColor = colorTheme[1]
     scoreBoard.style.outlineColor = colorTheme[1]
     scoreBoard.style.backgroundColor = colorTheme[2]
@@ -36,6 +38,8 @@ function updateColorTheme() {
     previousScoreBox.style.backgroundColor = colorTheme[2]
     timeBox.style.outlineColor = colorTheme[1]
     timeBox.style.backgroundColor = colorTheme[2]
+    themeToolbar.style.backgroundColor = colorTheme[2]
+    themeToolbar.style.borderColor = colorTheme[1]
 
     if (inGame == false) {
         grid.style.backgroundColor = colorTheme[2]

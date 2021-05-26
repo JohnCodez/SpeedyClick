@@ -1,6 +1,9 @@
 const body = document.getElementById('body')
+const bodyWithoutTitle = document.getElementById('body-without-title')
+const title = document.getElementById('title')
 
 // Theme
+const themeToolbar = document.getElementById('theme-toolbar')
 const blackTheme = document.getElementById('black-theme')
 const blueTheme = document.getElementById('blue-theme')
 const redTheme = document.getElementById('red-theme')
