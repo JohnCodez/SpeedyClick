@@ -9,6 +9,7 @@ function updateCursor() {
     customTheme1.style.cursor = cursorPointer
     customTheme2.style.cursor = cursorPointer
     customTheme3.style.cursor = cursorPointer
+    account.style.cursor = cursorPointer
 
     let selectClassic = document.getElementById('classic')
     let selectEnd = document.getElementById('endText')

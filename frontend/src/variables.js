@@ -1,6 +1,12 @@
 const body = document.getElementById('body')
 const bodyWithoutTitle = document.getElementById('body-without-title')
 const title = document.getElementById('title')
+const grayBackground = document.getElementById('gray-background')
+
+const account = document.getElementById('account')
+const accountTab = document.getElementById('account-tab')
+const login = document.getElementById('login')
+const signup = document.getElementById('signup')
 
 // Theme
 const themeToolbar = document.getElementById('theme-toolbar')

@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="stylesheets/scoreboard.css">
     <link rel="stylesheet" href="stylesheets/time.css">
     <link rel="stylesheet" href="stylesheets/themes.css">
+    <link rel="stylesheet" href="stylesheets/account.css">
     <script src="src/variables.js" defer></script>
+    <script src="src/account.js" defer></script>
     <script src="src/gamemodeTimes.js" defer></script>
     <script src="src/gridboxes.js" defer></script>
     <script src="src/time.js" defer></script>
@@ -30,7 +32,25 @@
 
 <body id='body'>
     <h1 id='title' dragable="false">Speedy<span style='color: rgb(0, 255, 242)'>Click</span></h1>
+    <h1 id='account' dragable="false"></h1>
+    <div id='gray-background'></div>
+    
     <div id='body-without-title'>
+        <div id='account-tab'>
+            <form id='login'>
+                <h1 id='login-title'>Login</h1>
+                <input type="text" id="username-login">
+                <input type="password" id="password-login">
+                <input type="submit" id='login-button' value='Login'>
+            </form>
+            <form id='signup'>
+                <h1 id='signup-title'>Signup</h1>
+                <input type="text" id="username-signup">
+                <input type="password" id="password-signup">
+                <input type="submit" id='signup-button' value='Signup'>
+            </form>
+        </div>
+
         <div id='game' dragable="false">
             <div id='grid' dragable="false">
             </div>

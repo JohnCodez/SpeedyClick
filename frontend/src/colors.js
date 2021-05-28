@@ -5,6 +5,8 @@ grid.style.backgroundColor = colorTheme[2]
 bodyWithoutTitle.style.color = colorTheme[0]
 themeToolbar.style.backgroundColor = colorTheme[2]
 themeToolbar.style.borderColor = colorTheme[1]
+accountTab.style.backgroundColor = colorTheme[2]
+accountTab.style.borderColor = colorTheme[1]
 
 customTheme1.value = colorTheme[0]
 customTheme2.value = colorTheme[1]
@@ -40,6 +42,8 @@ function updateColorTheme() {
     timeBox.style.backgroundColor = colorTheme[2]
     themeToolbar.style.backgroundColor = colorTheme[2]
     themeToolbar.style.borderColor = colorTheme[1]
+    accountTab.style.backgroundColor = colorTheme[2]
+    accountTab.style.borderColor = colorTheme[1]
 
     if (inGame == false) {
         grid.style.backgroundColor = colorTheme[2]
