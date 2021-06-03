@@ -1,4 +1,4 @@
-# SpeedyClick v0.44
+# SpeedyClick v0.45
 <br>
 Speedy click is a temporary name while the project is in Developement!
 
@@ -16,6 +16,9 @@ Everything in here is made by me!<br><br>
 <br><br>
 
 # Version Notes
+
+## v0.45
+-Organized src and fixed html
 
 ## v0.44
 -New visuals and bug fixes
