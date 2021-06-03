@@ -14,6 +14,7 @@ customTheme3.value = colorTheme[2]
 customTheme1.style.visibility = 'hidden'
 customTheme2.style.visibility = 'hidden'
 customTheme3.style.visibility = 'hidden'
+themeToolbar.style.visibility = 'hidden'
 
 function setColors() {
     document.getElementById('time').style.color = colorTheme[0]
@@ -127,6 +128,14 @@ colorDropdown.addEventListener('click', () => {
         moveUp(customTheme3, 106)
     }
 
+})
+
+menuButton.addEventListener('click', () => {
+    if (themeToolbar.style.visibility === 'hidden'){
+        themeToolbar.style.visibility = 'visible'
+    } else {
+        themeToolbar.style.visibility = 'hidden'
+    }
 })
 
 customThemePicker.addEventListener('click', () => {

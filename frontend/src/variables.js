@@ -2,6 +2,7 @@ const body = document.getElementById('body')
 const bodyWithoutTitle = document.getElementById('body-without-title')
 const title = document.getElementById('title')
 const grayBackground = document.getElementById('gray-background')
+const menuButton = document.getElementById('menu')
 
 const account = document.getElementById('account')
 const accountTab = document.getElementById('account-tab')
