@@ -1,4 +1,4 @@
-# SpeedyClick v0.46
+# SpeedyClick v0.47
 <br>
 Speedy click is a temporary name while the project is in Developement!
 
@@ -16,6 +16,9 @@ Everything in here is made by me!<br><br>
 <br><br>
 
 # Version Notes
+
+## v0.47
+-Fixed menu button and color picker bug
 
 ## v0.46
 -Visual update and menu button to toggle theme toolbar

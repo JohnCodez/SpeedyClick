@@ -130,14 +130,6 @@ colorDropdown.addEventListener('click', () => {
 
 })
 
-menuButton.addEventListener('click', () => {
-    if (themeToolbar.style.visibility === 'hidden'){
-        themeToolbar.style.visibility = 'visible'
-    } else {
-        themeToolbar.style.visibility = 'hidden'
-    }
-})
-
 customThemePicker.addEventListener('click', () => {
     let c1, c2, c3
     c1 = randomColor()
