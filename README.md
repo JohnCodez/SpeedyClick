@@ -1,4 +1,4 @@
-# SpeedyClick v0.50
+# SpeedyClick v0.51
 <br>
 Speedy click is a temporary name while the project is in Developement!
 
@@ -16,6 +16,9 @@ Everything in here is made by me!<br><br>
 <br><br>
 
 # Version Notes
+
+## v0.51
+-Added Animation for Toolbar
 
 ## v0.50
 -Removed frontend folder, organized files and allowing real time automatic updating 

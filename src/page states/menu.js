@@ -1,8 +1,23 @@
 menuButton.addEventListener('click', () => {
     if (themeToolbar.style.visibility === 'hidden'){
         themeToolbar.style.visibility = 'visible'
+
+        for (let i = 10; i <= 100; i = i + 10) {
+            setTimeout(() => {themeToolbar.style.zoom = `${i}%`}, i) 
+        }
+        
     } else {
-        themeToolbar.style.visibility = 'hidden'
+        let j = 10;
+        for (let i = 100; i >= 10; i = i - 10) {
+            setTimeout(() => {
+                themeToolbar.style.zoom = `${i}%`
+                if(i === 10) {
+                    themeToolbar.style.visibility = 'hidden'
+                }
+            }
+            , j)
+            j = j + 10
+        }
 
         if (customTheme1.style.visibility === 'visible'){
         customTheme1.style.visibility = 'hidden'
