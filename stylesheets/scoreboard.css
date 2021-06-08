@@ -4,7 +4,7 @@
     -moz-user-select: none;
     background: transparent;
     border: none;
-    width: 10rem;
+    width: 18rem;
     font-size: 4rem;
     margin-left: 1rem;
 }
@@ -27,6 +27,9 @@
     outline: solid 0.34rem;
     width: 20rem;
     height: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 #previous-score-box {

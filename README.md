@@ -1,4 +1,4 @@
-# SpeedyClick v0.52
+# SpeedyClick v0.60
 <br>
 Speedy click is a temporary name while the project is in Developement!
 
@@ -16,6 +16,10 @@ Everything in here is made by me!<br><br>
 <br><br>
 
 # Version Notes
+
+## v0.60
+-Page automatically scales evenly based on screen height so the full board is always visible and playable<br><br>
+-Fixed score cutoff
 
 ## v0.52
 -Changed location of animation start
