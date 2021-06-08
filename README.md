@@ -1,4 +1,4 @@
-# SpeedyClick v0.60
+# SpeedyClick v0.61
 <br>
 Speedy click is a temporary name while the project is in Developement!
 
@@ -16,6 +16,9 @@ Everything in here is made by me!<br><br>
 <br><br>
 
 # Version Notes
+
+## v0.61
+-Losing or gaining time now shows 1 notification for each time its gained or lost instead of replacing the last notification
 
 ## v0.60
 -Page automatically scales evenly based on screen height so the full board is always visible and playable<br><br>
