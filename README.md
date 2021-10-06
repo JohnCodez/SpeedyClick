@@ -12,7 +12,6 @@ The Leaderboard and account systems will be built in the backend folder.
 This uses custom rails API's 
 
 Everything in here is made by me!<br><br>
-<br><br>
 
 # Version Notes
 
