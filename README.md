@@ -8,8 +8,7 @@ If the above link is not working, the site is most likely down for maintainance.
 The game is entirely built in the frontend folder.
 This uses Javascript, HTML, and CSS
 
-The Leaderboard and account systems will be built in the backend folder.
-This uses custom rails API's 
+The Leaderboard and account systems coming soon
 
 Everything in here is made by me!<br><br>
 
