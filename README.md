@@ -6,7 +6,7 @@ You can test play it at https://speedy-click.netlify.app/ or by downloading the 
 If the above link is not working, the site is most likely down for maintainance. This will be updated if the link changes.
 
 The game is entirely built in the frontend folder.
-This uses Javascript, HTML, and CSS, Jquery
+This uses Javascript, HTML, and CSS
 
 The Leaderboard and account systems will be built in the backend folder.
 This uses custom rails API's 
